@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+  --white: #fff;
+  --light-red: crimson;
+  --orange: rgb(255, 102, 0);
+  --black: #000;
+  --light-blue: dodgerblue;
+  --green: rgb(36, 231, 62);
+  --dark-blue: #0652dd;
+}
+.homepage-container {
+  min-height: 100vh;
+}
+
+header {
+  /* border:1px solid black; */
+  height: fit-content;
+  color: var(--white);
+  box-shadow: 2px 2px 10px 3px rgb(131, 127, 127);
+}
+
+header nav {
+  min-height: 12vh;
+  /* border:1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  padding-inline: 2rem;
+}
+
+nav .logo {
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.logo a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav .pages-link-section {
+  display: flex;
+  justify-content: space-around;
+  min-width: 25%;
+  font-size: 1rem;
+}
+.pages-link-section a {
+  text-decoration: none;
+  color: var(--white);
+}
+.pages-link-section a:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+/* ------------ main section ------------- */
+.homepage-container main {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+.homepage-information-section {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4rem;
+  gap: 1rem;
+}
+.homepage-information-section h3 {
+  font-size: 2rem;
+}
+.homepage-information-section p {
+  line-height: 2;
+  font-size: 1.2rem;
+}
+.homepage-image-section {
+  width: 40%;
+}
+.homepage-image-section img {
+  width: 80%;
+  /* height:100%; */
+}
+
+.homepage-button-section {
+  display: flex;
+  gap: 2rem;
+}
+.homepage-button-section button {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--white);
+}
+.homepage-button-section button:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 1000px) {
+  nav .pages-link-section {
+    min-width: 30%;
+  }
+  .homepage-information-section {
+    padding-left: 2rem;
+  }
+  .homepage-information-section h3 {
+    font-size: 1.4rem;
+  }
+  .homepage-information-section p {
+    line-height: 2;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav {
+    padding-inline: 1rem;
+  }
+
+  nav .logo {
+    font-size: 1rem;
+  }
+  nav .pages-link-section {
+    min-width: 40%;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  .homepage-container main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .homepage-information-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .homepage-image-section {
+    width: 70%;
+  }
+
+  .homepage-image-section img {
+    width: 100%;
+  }
+  .homepage-information-section p {
+    line-height: 2;
+    font-size: 1rem;
+  }
+}

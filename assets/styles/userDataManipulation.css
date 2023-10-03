@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.user-data-manipulation-container {
+  min-height: 100vh;
+}
+.users-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem 1rem 2rem 1rem;
+}
+.users-section {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  column-gap: 0.8rem;
+}
+
+.users-section .user {
+  border: 1px solid var(--dark-blue);
+  min-width: 32%;
+  /* flex-basis: 31%; */
+  height: fit-content;
+  padding: 1rem;
+  line-height: 2;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  margin: 1rem 0;
+}
+.user:hover {
+  box-shadow: 3px 3px 10px 2px grey;
+  transform: translate(1px, -8px);
+  cursor: pointer;
+}
+.operations-section {
+  display: flex;
+  justify-content: space-between;
+}
+.operations-section button {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  border: none;
+}
+.update-user-btn {
+  background-color: var(--orange);
+}
+.update-user-btn:hover {
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  background-color: var(--white);
+}
+.delete-user-btn {
+  background-color: var(--light-red);
+}
+.delete-user-btn:hover {
+  border: 1px solid var(--light-red);
+  color: var(--light-red);
+  background-color: var(--white);
+}
+
+/* ----------form ---------- */
+
+.update-user-form {
+  border: 1px solid var(--dark-blue);
+  width: 50%;
+  /* min-height:60vh; */
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* box-shadow:2px 2px 10px 3px grey; */
+}
+
+.update-user-form > section {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  /* border:1px solid red; */
+  justify-content: space-between;
+  line-height: 1.4;
+  flex-wrap: wrap;
+}
+
+.update-user-form label {
+  width: 30%;
+  font-size: 1.4rem;
+}
+
+.update-user-form input {
+  font-size: 1rem;
+  padding-inline: 0.3rem;
+  border: 1px solid var(--dark-blue);
+}
+input:focus {
+  outline: none;
+}
+
+.update-user-form input:not([type='radio']),
+.gender-options-section {
+  width: 50%;
+}
+.gender-options-section {
+  line-height: 2;
+}
+.gender-options-section section {
+  display: flex;
+  gap: 0.4rem;
+}
+.update-user-form button {
+  width: fit-content;
+  padding: 0.7rem 2rem;
+  border: none;
+  font-size: 1rem;
+  margin: 0 auto;
+  border: 1px solid var(--light-blue);
+}
+.update-user-form button:hover {
+  cursor: pointer;
+}
+
+.user-data-manipulation-container .update-user-form {
+  border: 1px solid var(--dark-blue);
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  box-shadow: 2px 2px 10px 2px grey;
+  min-height: fit-content;
+  background-color: var(--white);
+}
+.update-user-form .edit-userInfo-btn {
+  background-color: var(--white);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+.edit-userInfo-btn:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+.update-user-form .cancel-btn {
+  background-color: var(--white);
+  color: var(--light-red);
+  border: 1px solid var(--light-red);
+}
+.cancel-btn:hover {
+  background-color: var(--light-red);
+  color: var(--white);
+}
+.active {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .users-section {
+    justify-content: space-around;
+  }
+  nav .pages-link-section {
+    min-width: 43%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .update-user-form {
+    gap: 1rem;
+  }
+  .user-data-manipulation-container .update-user-form {
+    width: 85%;
+  }
+  .update-user-form > section {
+    flex-direction: row;
+  }
+
+  .update-user-form label {
+    width: 75%;
+    font-size: 1rem;
+  }
+  .update-user-form input:not([type='radio']),
+  .gender-options-section {
+    width: 96%;
+    line-height: 2;
+  }
+}

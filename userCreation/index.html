@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Creation Form Page</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/userCreation.css">
+</head>
+
+<body>
+    <section class="user-creation-container">
+        <header>
+            <nav>
+                <section class="logo">
+                    <a href="../" target="_self">User Database Hub</a>
+                </section>
+                <section class="pages-link-section">
+                    <a href="../" target="_self">Home</a>
+                    <a href="./" target="_self">Create User</a>
+                    <a href="../UserDataManipulation/" target="_self">Show Users</a>
+                </section>
+            </nav>
+        </header>
+        <main class="form-container">
+            <section class="image">
+                <img src="../assets/images/Forms.png" alt="forms pic">
+            </section>
+            <form method="post">
+                <h1>USER CREATION FORM</h1>
+                <section id="firstname-section">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" required>
+                </section>
+                <section id="lastname-section">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" required>
+                </section>
+                <section id="email-section">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </section>
+                <section id="gender-section">
+                    <label>Gender</label>
+
+                    <section class="gender-options-section">
+                        <section class="male-section">
+                            <input type="radio" name="gender" id="male" value="male" required>
+                            <label for="male">Male</label>
+                        </section>
+                        <section class="female-section">
+                            <input type="radio" name="gender" id="female" value="female" required>
+                            <label for="female">Female</label>
+                        </section>
+                        <section class="other-gender-section">
+                            <input type="radio" name="gender" id="other-gender" value="other" required>
+                            <label for="other-gender">Other</label>
+                        </section>
+                    </section>
+
+                </section>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

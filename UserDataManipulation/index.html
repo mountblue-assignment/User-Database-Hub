@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List Page</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/userCreation.css">
+    <link rel="stylesheet" href="../assets/styles/userDataManipulation.css">
+
+</head>
+
+<body>
+    <section class="user-data-manipulation-container">
+        <header>
+            <nav>
+                <section class="logo">
+                    <a href="../" target="_self">User Database Hub</a>
+                </section>
+                <section class="pages-link-section">
+                    <a href="../" target="_self">Home</a>
+                    <a href="../userCreation/" target="_self">Create User</a>
+                    <a href="./" target="_self">Show Users</a>
+                </section>
+            </nav>
+        </header>
+
+        <main class="users-container">
+            <h1>USERS LIST : </h1>
+            <section class="users-section">
+
+            </section>
+        </main>
+        <form method="post" class="update-user-form hide">
+            <h1>User Information : </h1>
+            <section id="firstname-section">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" required>
+            </section>
+            <section id="lastname-section">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" required>
+            </section>
+            <section id="email-section">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </section>
+
+            <section id="gender-section">
+                <label>Gender</label>
+
+                <section class="gender-options-section">
+                    <section class="male-section">
+                        <input type="radio" name="gender" id="male" value="male" required>
+                        <label for="male">Male</label>
+                    </section>
+                    <section class="female-section">
+                        <input type="radio" name="gender" id="female" value="female" required>
+                        <label for="female">Female</label>
+                    </section>
+                    <section class="other-gender-section">
+                        <input type="radio" name="gender" id="other-gender" value="other" required>
+                        <label for="other-gender">Other</label>
+                    </section>
+                </section>
+
+            </section>
+
+            <section class="buttons-section">
+                <button type="button" class="edit-userInfo-btn">Edit</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </section>
+        </form>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
