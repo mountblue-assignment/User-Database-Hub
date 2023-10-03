@@ -21,6 +21,6 @@ to perform  on predefined User Database (Airtable Base)
 
 ![userlist](https://github.com/mountblue-assignment/User-Database-Hub/assets/90507983/c95b656a-48c8-41fd-a7e0-893618cad31c)
 
-## User Updation Popup From View : - 
+## User Updation Popup Form View : - 
 
 ![userUpdation](https://github.com/mountblue-assignment/User-Database-Hub/assets/90507983/367b2756-f091-46b2-b18f-c9c6515b829d)
