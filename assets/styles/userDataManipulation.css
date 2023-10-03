@@ -74,7 +74,7 @@
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   /* box-shadow:2px 2px 10px 3px grey; */
 }
 
@@ -165,14 +165,10 @@ input:focus {
   .users-section {
     justify-content: space-around;
   }
-  nav .pages-link-section {
-    min-width: 43%;
-  }
+ 
 }
 @media screen and (max-width: 600px) {
-  .update-user-form {
-    gap: 1rem;
-  }
+
   .user-data-manipulation-container .update-user-form {
     width: 85%;
   }

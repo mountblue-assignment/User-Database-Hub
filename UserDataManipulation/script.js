@@ -46,6 +46,9 @@ function createUserContent(userData) {
       <section class="email">
         <span>Email: </span>${userData.Email}
       </section>
+      <section class="Address">
+        <span>Address: </span>${userData.Address}
+      </section>
       <section class="gender">
         <span>Gender: </span>${userData.Gender}
       </section>
@@ -95,6 +98,7 @@ function updateUser(userId, user) {
   updateUserForm.querySelector('#firstname').value = user.Firstname;
   updateUserForm.querySelector('#lastname').value = user.Lastname;
   updateUserForm.querySelector('#email').value = user.Email;
+  updateUserForm.querySelector('#address').value = user.Address;
   updateUserForm.querySelector(`#${user.Gender}`).checked = true;
 
   updateUserBtn.addEventListener('click', () =>
@@ -107,12 +111,13 @@ async function updateUserInfoInAirtable(userId) {
     const firstName = updateUserForm.querySelector('#firstname').value.trim();
     const lastName = updateUserForm.querySelector('#lastname').value.trim();
     const email = updateUserForm.querySelector('#email').value.trim();
+    const address = updateUserForm.querySelector('#address').value.trim();
     const gender = updateUserForm
       .querySelector('input[name=gender]:checked')
       .value.trim();
 
     //we will check if  any input field is empty or not ------
-    if (!firstName || !lastName || !email || !gender) {
+    if (!firstName || !lastName || !email || !address || !gender) {
       console.error('Please Fill all The Fields');
       alert('Please Fill all The Fields !');
       return;
@@ -128,6 +133,7 @@ async function updateUserInfoInAirtable(userId) {
         Firstname: firstName,
         Lastname: lastName,
         Email: email,
+        Address: address,
         Gender: gender,
       },
     };
